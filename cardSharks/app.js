@@ -1,15 +1,34 @@
 var express = require('express');
+require('./db');
+require('./auth');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var passport = require('passport');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
 
+//sessions
+var session = require('express-session');
+var sessionOptions = {
+  secret: 'secret cookie thang (store this elsewhere!)',
+  resave: true,
+  saveUninitialized: true
+};
+app.use(session(sessionOptions));
+
+
+//passport
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(function(req, res, next){
+	res.locals.user = req.user;
+	next();
+});
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
