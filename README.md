@@ -1,3 +1,6 @@
 # ms6880-final-project
 final-project created for ms6880
 
+Overview
+
+For all the future card sharks out there, you can now play some classic card games!  Featuring the classic games Go Fish! and War, Users can register, login and play these classic card games against the computer.  High scores will even be saved so you can hone your card skills!
