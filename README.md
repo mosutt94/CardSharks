@@ -27,9 +27,9 @@ var User = new mongoose.Schema({
 
 Images
 
-[!Alt text](https://github.com/nyu-csci-ua-0480-002-fall-2015/ms6880-final-project/blob/master/img/login.jpg)
-[!Alt text](https://github.com/nyu-csci-ua-0480-002-fall-2015/ms6880-final-project/blob/master/img/goFish.jpg)
-[!Alt text](https://github.com/nyu-csci-ua-0480-002-fall-2015/ms6880-final-project/blob/master/img/highScore.jpg)
+![Alt text](https://github.com/nyu-csci-ua-0480-002-fall-2015/ms6880-final-project/blob/master/img/login.jpg)
+![Alt text](https://github.com/nyu-csci-ua-0480-002-fall-2015/ms6880-final-project/blob/master/img/goFish.jpg)
+![Alt text](https://github.com/nyu-csci-ua-0480-002-fall-2015/ms6880-final-project/blob/master/img/highScore.jpg)
 
 
 
