@@ -19,5 +19,12 @@ var User = new mongoose.Schema({
 ![Alt text](https://github.com/nyu-csci-ua-0480-002-fall-2015/ms6880-final-project/blob/master/img/goFish.jpg)
 ![Alt text](https://github.com/nyu-csci-ua-0480-002-fall-2015/ms6880-final-project/blob/master/img/highScore.jpg)
 
+# Research Topics
+
+* (1 point) Using pre-built Express project templates
+* (3 points) Integrate user authentication
+* (2 points) Perform client side form validation using a JavaScript library
+* (1 point) Use a CSS framework throughout your site, use a reasonable of customization of the framework (Bootstrap)
+* (1 point) Integrate visual effects
 
 

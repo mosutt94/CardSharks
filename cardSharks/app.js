@@ -9,7 +9,10 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
+/*var $ = require('jquery');
+global.jquery = $; 
+require('bootstrap');
+*/
 var app = express();
 
 //sessions
