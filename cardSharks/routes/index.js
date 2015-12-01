@@ -65,4 +65,28 @@ router.get('/logout', function(req, res) {
   res.redirect('/');
 });
 
+router.get('/win', function(req, res) {
+  if(typeof req.user.currentWinStreak === 'undefined'){
+  	req.user.currentWinStreak = 1;
+  	req.user.bestWinStreak = 1;
+  	console.log(req.user.currentWinStreak);
+  }
+  else {
+  	req.user.currentWinStreak++;
+  }
+  if(req.user.currentWinStreak > req.user.bestWinStreak){
+  	req.user.bestWinStreak = req.user.currentWinStreak;
+  }
+  req.user.save(function(err, savedUser, count) {
+  	res.render('win', {currentWinStreak: req.user.currentWinStreak, bestWinStreak: req.user.bestWinStreak});
+  });
+  
+});
+
+router.get('/lose', function(req, res) {
+	req.user.currentWinStreak = 0;
+	req.user.save(function(err, savedUser, count) {
+  	res.render('lose', {currentWinStreak: req.user.currentWinStreak, bestWinStreak: req.user.bestWinStreak});
+  });
+}
 module.exports = router;
