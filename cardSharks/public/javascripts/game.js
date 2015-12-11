@@ -147,7 +147,7 @@ function compAsk() {
 		}
 	   }
 	if(isMatch === false) {
-		message += pGuide.innerHTML = "Computer asks for a "  +compCards[handPos].rank+" ...Go Fish! (your turn again)\n";
+		message += pGuide.innerHTML = "Comp's Turn: Computer asks for a "  +compCards[handPos].rank+" ...Go Fish! (your turn again)\n";
 
 		if(deck.length > 0){
 			if(deck[0].rank === compCards[handPos].rank){ 

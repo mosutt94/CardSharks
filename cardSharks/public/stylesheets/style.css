@@ -108,3 +108,7 @@ a {
 @keyframes wiggle{
 	0%{transform:rotate(3deg);}50%{transform:rotate(-3deg);}100%{transform:rotate(3deg);}
 }
+table{
+ 	border-collapse: separate;
+    border-spacing: 70px;
+}

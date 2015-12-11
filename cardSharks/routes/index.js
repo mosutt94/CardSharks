@@ -89,4 +89,28 @@ router.get('/lose', function(req, res) {
   	res.render('lose', {currentWinStreak: req.user.currentWinStreak, bestWinStreak: req.user.bestWinStreak});
   });
 });
+router.get('/highScores', function(req, res) {
+	User.find({},function(err, users, count){
+		  users.sort(function(a, b){return b.bestWinStreak-a.bestWinStreak});
+
+		  res.render('highScores', {users: users});
+	});
+});
+
+
+router.get('/api/highScores', function(req, res) {
+  
+    User.find({}, function(err, users, count) {
+    console.log(users);
+	if(req.query.username !== null){
+		console.log("in!");
+		users = users.filter(function(element) {
+			console.log("e "+ element.username+" r " +req.query.username);
+			return element.username == req.query.username;
+		});
+	}
+	console.log(users);
+	res.send(users);	
+	});
+});
 module.exports = router;
