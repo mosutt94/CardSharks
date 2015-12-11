@@ -88,5 +88,5 @@ router.get('/lose', function(req, res) {
 	req.user.save(function(err, savedUser, count) {
   	res.render('lose', {currentWinStreak: req.user.currentWinStreak, bestWinStreak: req.user.bestWinStreak});
   });
-}
+});
 module.exports = router;

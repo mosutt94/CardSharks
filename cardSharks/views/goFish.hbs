@@ -1,9 +1,12 @@
   
-  		<h1> Go Fish </h1>
-			<div id="game">
-				<div id="startForm">
-					<button id='startButton'>Play Now</button>
-				</div>
+  		<h1 id="title"> Go Fish </h1>
+  		{{message}}
+			<div id="game" align="center">
+				<div id="compBoard"></div>
+				<h4 id="compMatchCount">Comp Score: 0</h4>
+				<h4 id="guide">Welcome to Go Fish!</h4>
+				<div id="playerBoard"></div>
+				<h4 id ="playerMatchCount">Player Score: 0</h4>
 			</div>
-		
-		<script src="../public/javascripts/game.js"></script>
+			
+		<script src="javascripts/game.js"></script>

@@ -7,7 +7,7 @@ var User = new mongoose.Schema({
   username: String,
   password: String,
   currentWinStreak: Number,
-  bestwinStreak, Number
+  bestWinStreak: Number,
 });
 
 
@@ -15,3 +15,4 @@ User.plugin(passportLocalMongoose);
 
 mongoose.model('User', User);
 mongoose.connect('mongodb://localhost/cardSharksdb');
+
